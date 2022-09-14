@@ -1,62 +1,42 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Database Project - Vet Clinic
 
-> Description the project.
-
+In this porject, I worked with relational database system PostgreSQL to build database for the Vet Clinic. Here, I will create different tables like animals, owners etc.
 
 ## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
+PostgreSQL
+SQL
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[coming soon](https://livedemo.com)
 
 
 ## Getting Started
+Create a repo then clone it and open into Visual Studio Code
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+## Setup
+Download and install Visual Studio, PostgreSQL
+Command line / Git bash
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+## Install
+Visual Studio Code
+PostgreSQL
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+[GitHub](https://github.com/roseokpe)
+[Twitter](https://twitter.com/roseokpe)
+[LinkedIn](https://www.linkedin.com/in/roseokpe/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Roseokpe/vet_clinic/issues).
 
 ## Show your support
 
