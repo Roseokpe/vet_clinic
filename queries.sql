@@ -85,3 +85,33 @@ SELECT animals.name from animals JOIN owners ON owners.id = animals.owners_id JO
 SELECT animals.name from animals JOIN owners ON owners.id = animals.owners_id WHERE animals.escape_attempts = '0' AND animals.owners_id = '5';
 
 SELECT full_name, COUNT(owners_id) FROM owners JOIN animals on owners.id = animals.owners_id GROUP BY full_name ORDER BY COUNT (owners_id) desc limit 1;
+
+-- project 4
+
+SELECT A.name, V.date_of_visits from visits V JOIN animals A ON A.id=V.animals_id WHERE vets_id = (SELECT id from vets where name ='William Tatcher') group by A.name, V.date_of_visits order by date_of_visits desc limit 1;
+
+SELECT * FROM visits WHERE vets_id = (SELECT id from vets where name ='Stephanie Mendez');
+
+
+select V.name, a.species_id, S.name FROM vets V Left JOIN specializations a ON    V.id = vets_id left JOIN species S ON species_id = S.Id;
+
+
+select S.name, visits.date_of_visits FROM visits JOIN vets V ON vets_id = (V.id ) JOIN animals S ON animals_id = S.Id where vets_id =(SELECT id from vets where name ='Stephanie Mendez') and date_of_visits BETWEEN '2020-04-01' and '2020-08-30';
+
+-- What animal has the most visits to vets?
+select count(animals_id), animals_id from visits group by animals_id limit 1;
+
+-- Who was Maisy Smith's first visit?
+select a.name, vt.name, v.date_of_visits from animals a join visits v on a.id = v.animals_id join vets vt on vt.id =v.vets_id where vt.name = 'Maisy Smith' order by v.date_of_visits asc limit 1;
+
+-- Details for most recent visit: animal information, vet information, and date of visit.
+select a.name as animal_name, a.weight_kg, vt.name as vet_doctor,vt.age, v.date_of_visits from animals a join visits v on a.id = v.animals_id join vets vt on vt.id =v.vets_id order by v.date_of_visits desc;
+
+
+--How many visits were with a vet that did not specialize in that animal's species?
+
+SELECT COUNT(visits.animals_id) FROM visits JOIN vets ON vets.id = visits.vets_id WHERE vets_id = '2';
+
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+
+SELECT species.name, COUNT(*) FROM species INNER JOIN animals ON animals.species_id = species.id INNER JOIN visits ON visits.animals_id = animals.id INNER JOIN vets ON vets.id = visits.vets_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(species.id) DESC LIMIT 1;
