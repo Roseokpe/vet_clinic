@@ -53,3 +53,7 @@ CREATE TABLE visits (
     date_of_visits DATE
 );
 
+
+-- performance 
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
