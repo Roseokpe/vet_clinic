@@ -116,3 +116,5 @@ SELECT COUNT(visits.animals_id) FROM visits JOIN vets ON vets.id = visits.vets_i
 
 SELECT species.name, COUNT(*) FROM species INNER JOIN animals ON animals.species_id = species.id INNER JOIN visits ON visits.animals_id = animals.id INNER JOIN vets ON vets.id = visits.vets_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(species.id) DESC LIMIT 1;
 
+-- Performance
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
