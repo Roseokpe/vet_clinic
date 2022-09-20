@@ -42,3 +42,7 @@ CREATE TABLE invoice_items (
     treatment_id INT REFERENCES treatments(id),
     PRIMARY KEY(id)
 );
+
+--indexes
+
+CREATE INDEX patients_index ON medical_histories(patient_id);
